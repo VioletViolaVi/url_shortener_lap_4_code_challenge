@@ -1,21 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def home():
-    return render_template("home.html")
-
-
-@app.route("/say_hello")
-def say_hello():
-    return "Hello There 👋"
-
-
-@app.route("/say_goodbye")
-def say_goodbye():
-    return "Bye Bye 👋"
+    if request.method == "POST":
+        url_attained = request.form["urlShortener"]
+        return url_attained
+    else:
+        return render_template("home.html")
 
 
 if __name__ == "__main__":
