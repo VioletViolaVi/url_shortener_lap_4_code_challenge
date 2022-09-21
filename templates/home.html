@@ -1,0 +1,34 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %} 
+
+{% block content%}
+  <div class="row">
+    <form class="col s12 m8 offset-m2" method="POST">
+      <div class="card-panel pink lighten-5 z-depth-2">
+        <h4 class="center-align pink-text text-darken-4">Enter a https:// URL</h4>
+        <div class="row">
+          <!-- url input -->
+          <div class="input-field col s12">
+            <i class="material-icons prefix pink-text text-darken-4">create</i>
+            <input
+              name="urlShortener"
+              id="urlShortener"
+              type="text"
+              pattern="https://.*"
+              placeholder="Enter a https:// URL:"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- submit btn -->
+        <div class="s6 center-align">
+          <button class=" btn-large pink darken-4 text-shadow center-align">
+            Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}
