@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %} 
+
+{% block content%}
+  <form action="" method="post">
+    <label for="urlShortener">Enter a https:// URL: </label>
+    <input
+      type="text"
+      name="urlShortener"
+      id="urlShortener"
+      required
+      pattern="https://.*"
+    />
+    <button>Submit</button>
+  </form>
+{% endblock %}
