@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Materialize Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <title>URL Shortener | {% block title %}{% endblock %}</title>
   </head>
   <body>
     <main>
-      <h1>URL Shortener</h1>
+      <h1 class="pink-text text-darken-4 center-align">URL Shortener</h1>
       {% block content %} {% endblock %}
     </main>
   </body>
